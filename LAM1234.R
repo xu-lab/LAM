@@ -3,6 +3,7 @@ library(ggplot2)
 
 db = "LAM1234"
 
+# LAM1,...,LAM4 are Seurat3 objects of individual LAM lung data
 objlist = list(LAM1,LAM2,LAM3,LAM4)
 
 anchors <- FindIntegrationAnchors(object.list = objlist, 
