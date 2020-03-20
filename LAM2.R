@@ -1,4 +1,4 @@
-library(Seurat) # Seurat 2.3.4
+library(Seurat) # Seurat 2
 library(dplyr)
 library(Matrix)
 library(reshape2)
@@ -80,7 +80,7 @@ graph.clustering.0 <- function(data.use, num.nn=30, do.jaccard=FALSE, method="Lo
 
 
 
-sdp = readRDS(file="./LAM2.rds")
+sdp = readRDS(file="LAM2.rds")
 sdp <- FindVariableGenes(sdp, do.plot = F)
 genes.use <- rownames(subset(sdp@hvg.info, gene.mean>0.25 & gene.dispersion.scaled>0.25))
 sdp@var.genes <- genes.use
