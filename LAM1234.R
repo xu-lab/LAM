@@ -1,7 +1,5 @@
-library(Seurat)
+library(Seurat) # Seurat 3
 library(ggplot2)
-
-db = "LAM1234"
 
 # LAM1,...,LAM4 are Seurat3 objects of individual LAM lung data
 objlist = list(LAM1,LAM2,LAM3,LAM4)
@@ -20,4 +18,4 @@ obj = RunUMAP(obj, reduction="pca", dims=1:30, umap.method="uwot",
 obj = FindNeighbors(obj, reduction = "pca", dims=1:100) 
 obj = FindClusters(obj, resolution = 1.2)
 
-saveRDS(obj, file=paste0(db, ".rds"))
+saveRDS(obj, file="LAM1234.rds")
