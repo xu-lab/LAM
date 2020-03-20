@@ -1,4 +1,4 @@
-library(Seurat)
+library(Seurat) # Seurat 2
 library(dplyr)
 library(Matrix)
 library(reshape2)
